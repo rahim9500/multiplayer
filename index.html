@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Imposter Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="setup-screen" class="screen">
+            <h1>Anime Imposter Game</h1>
+            <div id="join-create">
+                <div>
+                    <h2>Create a Game</h2>
+                    <input type="text" id="username-create" placeholder="Your nickname">
+                    <button id="create-game">Create Game</button>
+                </div>
+                <div>
+                    <h2>Join a Game</h2>
+                    <input type="text" id="room-code" placeholder="Room Code">
+                    <input type="text" id="username-join" placeholder="Your nickname">
+                    <button id="join-game">Join Game</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="lobby-screen" class="screen hidden">
+            <h1>Game Lobby</h1>
+            <div id="room-info">
+                <h2>Room Code: <span id="room-code-display"></span></h2>
+            </div>
+            <div id="players-list">
+                <h2>Players</h2>
+                <ul id="players"></ul>
+            </div>
+            <div id="host-controls" class="hidden">
+                <button id="start-game" disabled>Start Game (Need at least 3 players)</button>
+            </div>
+            <p id="waiting-message">Waiting for host to start the game...</p>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <h1 id="role-title">Your Role</h1>
+            <div id="role-info">
+                <!-- Role information will be displayed here -->
+            </div>
+            <button id="back-to-lobby">Back to Lobby</button>
+        </div>
+    </div>
+
+    <!-- Include PeerJS library -->
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

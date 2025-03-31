@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.screen {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
+}
+
+#join-create {
+    display: flex;
+    justify-content: space-between;
+}
+
+#join-create > div {
+    width: 48%;
+}
+
+#players-list {
+    margin: 20px 0;
+}
+
+#players li {
+    padding: 5px 0;
+}
+
+#role-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.anime-character {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.role-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.imposter {
+    color: red;
+}
+
+.normal-player {
+    color: green;
+}
