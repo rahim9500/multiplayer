@@ -13,17 +13,77 @@ document.addEventListener('DOMContentLoaded', () => {
         animeCharacter: null,
     };
 
-    // Anime characters list (you can add more)
     const animeCharacters = [
-        { name: "Naruto Uzumaki", image: "https://via.placeholder.com/300x300.png?text=Naruto" },
-        { name: "Monkey D. Luffy", image: "https://via.placeholder.com/300x300.png?text=Luffy" },
-        { name: "Goku", image: "https://via.placeholder.com/300x300.png?text=Goku" },
-        { name: "Sailor Moon", image: "https://via.placeholder.com/300x300.png?text=Sailor+Moon" },
-        { name: "Spike Spiegel", image: "https://via.placeholder.com/300x300.png?text=Spike" },
-        { name: "Mikasa Ackerman", image: "https://via.placeholder.com/300x300.png?text=Mikasa" },
-        { name: "Light Yagami", image: "https://via.placeholder.com/300x300.png?text=Light" },
-        { name: "Inuyasha", image: "https://via.placeholder.com/300x300.png?text=Inuyasha" }
+        // Naruto Series
+        "Naruto Uzumaki", "Sasuke Uchiha", "Sakura Haruno", "Kakashi Hatake", "Itachi Uchiha",
+        "Hinata Hyuga", "Shikamaru Nara", "Gaara", "Madara Uchiha", "Obito Uchiha",
+        "Jiraiya", "Tsunade", "Orochimaru", "Might Guy", "Rock Lee",
+    
+        // One Piece Series
+        "Monkey D. Luffy", "Roronoa Zoro", "Nami", "Sanji", "Tony Tony Chopper",
+        "Usopp", "Nico Robin", "Franky", "Brook", "Trafalgar D. Water Law",
+        "Shanks", "Portgas D. Ace", "Kaido", "Big Mom", "Gol D. Roger",
+    
+        // Dragon Ball Series
+        "Goku", "Vegeta", "Gohan", "Frieza", "Piccolo",
+        "Trunks", "Bulma", "Krillin", "Majin Buu", "Cell",
+        "Android 17", "Android 18", "Beerus", "Whis", "Jiren",
+    
+        // Sailor Moon Series
+        "Sailor Moon", "Sailor Mars", "Sailor Mercury", "Sailor Jupiter", "Tuxedo Mask",
+        "Sailor Venus", "Sailor Saturn", "Sailor Neptune", "Sailor Uranus", "Sailor Pluto",
+    
+        // Attack on Titan Series
+        "Eren Yeager", "Mikasa Ackerman", "Armin Arlert", "Levi Ackerman", "Erwin Smith",
+        "Hange Zoë", "Jean Kirstein", "Reiner Braun", "Bertolt Hoover", "Zeke Yeager",
+    
+        // Death Note Series
+        "Light Yagami", "L", "Misa Amane", "Ryuk", "Near",
+        "Mello", "Rem", "Soichiro Yagami", "Teru Mikami", "Watari",
+    
+        // Fullmetal Alchemist Series
+        "Edward Elric", "Alphonse Elric", "Roy Mustang", "Riza Hawkeye", "Scar",
+        "Van Hohenheim", "King Bradley", "Greed", "Envy", "Lust",
+    
+        // Inuyasha Series
+        "Inuyasha", "Sesshomaru", "Kagome Higurashi", "Miroku", "Sango",
+        "Shippo", "Naraku", "Kikyo", "Kaede", "Koga",
+    
+        // Demon Slayer Series
+        "Tanjiro Kamado", "Nezuko Kamado", "Zenitsu Agatsuma", "Inosuke Hashibira", "Kyojuro Rengoku",
+        "Giyu Tomioka", "Shinobu Kocho", "Mitsuri Kanroji", "Muichiro Tokito", "Tengen Uzui",
+    
+        // My Hero Academia Series
+        "Izuku Midoriya", "Katsuki Bakugo", "Shoto Todoroki", "All Might", "Tenya Iida",
+        "Ochaco Uraraka", "Tsuyu Asui", "Eijiro Kirishima", "Endeavor", "Tomura Shigaraki",
+    
+        // Hunter x Hunter Series
+        "Gon Freecss", "Killua Zoldyck", "Kurapika", "Leorio Paradinight", "Hisoka",
+        "Chrollo Lucilfer", "Netero", "Meruem", "Neferpitou", "Biscuit Krueger",
+    
+        // Tokyo Ghoul Series
+        "Ken Kaneki", "Touka Kirishima", "Rize Kamishiro", "Yoshimura", "Shuu Tsukiyama",
+        "Kishou Arima", "Juuzou Suzuya", "Ayato Kirishima", "Eto Yoshimura", "Hinami Fueguchi",
+    
+        // Cowboy Bebop Series
+        "Spike Spiegel", "Jet Black", "Faye Valentine", "Edward", "Vicious",
+    
+        // Gintama Series
+        "Gintoki Sakata", "Shinpachi Shimura", "Kagura", "Hijikata Toshiro", "Sogo Okita",
+        
+        // Re:Zero Series
+        "Subaru Natsuki", "Emilia", "Rem", "Ram", "Beatrice",
+    
+        // Sword Art Online Series
+        "Kirito", "Asuna", "Leafa", "Sinon", "Alice Zuberg",
+    
+        // Code Geass Series
+        "Lelouch Lamperouge", "C.C.", "Suzaku Kururugi", "Kallen Kozuki", "Schneizel el Britannia",
+    
+        // Black Clover Series
+        "Asta", "Yuno", "Noelle Silva", "Yami Sukehiro", "Julius Novachrono"
     ];
+    
 
     // DOM Elements
     const setupScreen = document.getElementById('setup-screen');
