@@ -335,41 +335,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Display game screen with role information
     function displayGameScreen(isImposter, character) {
-        lobbyScreen.classList.add('hidden');
-        gameScreen.classList.remove('hidden');
+    lobbyScreen.classList.add('hidden');
+    gameScreen.classList.remove('hidden');
+    
+    roleInfo.innerHTML = '';
+    
+    if (isImposter) {
+        const message = document.createElement('div');
+        message.className = 'role-message imposter';
+        message.textContent = 'You are the IMPOSTER!';
+        roleInfo.appendChild(message);
         
-        roleInfo.innerHTML = '';
+        const description = document.createElement('p');
+        description.textContent = 'Try to blend in with the other players! They all received the same anime character.';
+        roleInfo.appendChild(description);
+    } else {
+        const message = document.createElement('div');
+        message.className = 'role-message normal-player';
+        message.textContent = 'You are a NORMAL PLAYER!';
+        roleInfo.appendChild(message);
         
-        if (isImposter) {
-            const message = document.createElement('div');
-            message.className = 'role-message imposter';
-            message.textContent = 'You are the IMPOSTER!';
-            roleInfo.appendChild(message);
-            
-            const description = document.createElement('p');
-            description.textContent = 'Try to blend in with the other players! They all received the same anime character.';
-            roleInfo.appendChild(description);
-        } else {
-            const message = document.createElement('div');
-            message.className = 'role-message normal-player';
-            message.textContent = 'You are a NORMAL PLAYER!';
-            roleInfo.appendChild(message);
-            
-            const characterName = document.createElement('h3');
-            characterName.textContent = `Your character: ${character.name}`;
-            roleInfo.appendChild(characterName);
-            
-            const characterImage = document.createElement('img');
-            characterImage.src = character.image;
-            characterImage.alt = character.name;
-            characterImage.className = 'anime-character';
-            roleInfo.appendChild(characterImage);
-            
-            const description = document.createElement('p');
-            description.textContent = 'Everyone except the imposter received this character. Try to figure out who the imposter is!';
-            roleInfo.appendChild(description);
-        }
+        const characterName = document.createElement('h3');
+        characterName.textContent = `Your character: ${character}`;
+        roleInfo.appendChild(characterName);
+        
+        // Note: Since we don't have actual images for the characters,
+        // we could either remove this part or use placeholder images
+        // For now, I'll use a placeholder
+        const characterImage = document.createElement('img');
+        characterImage.src = `/api/placeholder/300/300`; // Using placeholder image
+        characterImage.alt = character;
+        characterImage.className = 'anime-character';
+        roleInfo.appendChild(characterImage);
+        
+        const description = document.createElement('p');
+        description.textContent = 'Everyone except the imposter received this character. Try to figure out who the imposter is!';
+        roleInfo.appendChild(description);
     }
+}
 
     // Update the players list in the UI
     function updatePlayersList() {
